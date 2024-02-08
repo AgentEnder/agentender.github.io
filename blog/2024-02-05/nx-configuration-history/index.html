@@ -10,7 +10,22 @@
         <title>Craigory Coppola</title>
       </head>
       <body>
-        <div id="react-root"><div style="display:flex;max-width:900px;margin:auto"><div style="padding:20px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;line-height:1.8em"><a class="navitem" href="/">Home</a><a class="navitem" href="/presentations">Speaking + Presentations</a><a class="navitem" href="/blog/1">Blog</a></div><div style="padding:20px;padding-bottom:50px;border-left:2px solid #eee;min-height:100vh"><nav class="toc"><ol class="toc-level toc-level-1"><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#tldr">TLDR</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#angular-beginnings">Angular Beginnings</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#workspace-configuration-v2">Workspace Configuration v2</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#projectjson-and-splitting-workspacejson">project.json and splitting workspace.json</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#the-beginnings-of-inference">The beginnings of inference</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#enter-lerna">Enter Lerna</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#inference-api-v1-and-workspaces-support">Inference API v1, and workspaces support</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#inference-api-v2">Inference API v2</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#project-configuration-v3--project-crystal-">Project Configuration v3 + Project Crystal 💎</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#conclusion">Conclusion</a></li></ol></nav><h1 id="a-brief-look-at-changes-to-nxs-configuration"><a aria-hidden="true" tabindex="-1" href="#a-brief-look-at-changes-to-nxs-configuration"><span>🔗</span></a>A brief look at changes to Nx&#x27;s Configuration</h1>
+        <div id="react-root"><div style="display:flex;max-width:900px;margin:auto"><div style="padding:20px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;line-height:1.8em"><a class="navitem" href="/">Home</a><a class="navitem" href="/presentations">Speaking + Presentations</a><a class="navitem" href="/blog/1">Blog</a></div><div style="padding:20px;padding-bottom:50px;border-left:2px solid #eee;min-height:100vh"><h1 id="a-brief-look-at-changes-to-nxs-configuration">A brief look at changes to Nx&#x27;s Configuration</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#tldr">TLDR</a></li>
+<li><a href="#angular-beginnings">Angular Beginnings</a></li>
+<li><a href="#workspace-configuration-v2">Workspace Configuration v2</a></li>
+<li><a href="#projectjson-and-splitting-workspacejson"><code>project.json</code> and splitting <code>workspace.json</code></a></li>
+<li><a href="#the-beginnings-of-inference">The beginnings of inference</a></li>
+<li><a href="#enter-lerna">Enter Lerna</a></li>
+<li><a href="#inference-api-v1-and-workspaces-support">Inference API v1, and workspaces support</a></li>
+<li><a href="#inference-api-v2">Inference API v2</a></li>
+<li><a href="#project-configuration-v3--project-crystal-">Project Configuration v3 + Project Crystal 💎</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<h2 id="introduction"><a aria-hidden="true" tabindex="-1" href="#introduction"><span>🔗</span></a>Introduction</h2>
 <p>Nx&#x27;s configuration has changed dramatically over the years, and it&#x27;s been a long journey to get to where we are today. I joined the Nx team in June 2021, right before we split up <code>workspace.json</code> into <code>workspace.json</code> and <code>project.json</code>. Since joining the team, I&#x27;ve had a pretty direct hand in many of these changes, and have worked closely on others.</p>
 <p>There are a few misconceptions about Nx that stem from its configuration and history, and I&#x27;d like to clear some of those up.</p>
 <ul>
@@ -272,12 +287,12 @@
 <p>Nx&#x27;s configuration has changed a lot over the years, and it&#x27;s been a long journey to get to where we are today. We&#x27;ve made a lot of changes to make Nx easier to adopt, and we&#x27;ve made a lot of changes to make Nx easier to use.</p>
 <p>Project Crystal helped slim down the Nx configuration within a workspace to only <code>nx.json</code> for many repos, and opens the doors for Nx to be used in a wider variety of repositories. We&#x27;re excited to see what the future holds for Nx, and as always, stay tuned 📺.</p></div></div></div>
         <script id="vike_pageContext" type="application/json">{"pageProps":"!undefined","urlPathname":"/blog/2024-02-05/nx-configuration-history","urlParsed":{"origin":null,"pathname":"/blog/2024-02-05/nx-configuration-history","pathnameOriginal":"/blog/2024-02-05/nx-configuration-history","search":{},"searchAll":{},"searchOriginal":null},"routeParams":{"date":"2024-02-05","slug":"nx-configuration-history"},"abortReason":"!undefined","_urlRewrite":null,"_urlRedirect":"!undefined","abortStatusCode":"!undefined","_abortCall":"!undefined","_pageContextInitIsPassedToClient":"!undefined","_pageId":"/pages/blog/view","data":"!undefined"}</script>
-        <script src="/assets/entries/entry-server-routing.f9fcf3bd.js" type="module" async></script>
-        <link rel="modulepreload" href="/assets/entries/pages_blog_view.page.368926a5.js" as="script" type="text/javascript">
+        <script src="/assets/entries/entry-server-routing.713ab366.js" type="module" async></script>
+        <link rel="modulepreload" href="/assets/entries/pages_blog_view.page.19f28206.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/chunks/chunk-529f355d.js" as="script" type="text/javascript">
-        <link rel="modulepreload" href="/assets/chunks/chunk-757def8e.js" as="script" type="text/javascript">
+        <link rel="modulepreload" href="/assets/chunks/chunk-d670b566.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/chunks/chunk-a9f9b8c5.js" as="script" type="text/javascript">
-        <link rel="modulepreload" href="/assets/entries/renderer_default.page.client.e7844b11.js" as="script" type="text/javascript">
+        <link rel="modulepreload" href="/assets/entries/renderer_default.page.client.5904ce63.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/chunks/chunk-9af66d49.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/entries/renderer_default.page.server.extractAssets.fa75b1ae.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/chunks/chunk-d1ef7cd1.js" as="script" type="text/javascript">
