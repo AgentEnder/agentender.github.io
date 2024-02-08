@@ -1,16 +1,16 @@
-import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...e.components};return s.jsxs(s.Fragment,{children:[s.jsx(n.h1,{id:"a-brief-look-at-changes-to-nxs-configuration",children:"A brief look at changes to Nx’s Configuration"}),`
+import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...e.components};return s.jsxs(s.Fragment,{children:[s.jsx(n.h1,{id:"from-angular-roots-to-crystal-future-nxs-evolutionary-journey",children:"From Angular Roots to Crystal Future: Nx’s Evolutionary Journey"}),`
 `,s.jsx(n.h2,{id:"table-of-contents",children:"Table of Contents"}),`
 `,s.jsxs(n.ul,{children:[`
 `,s.jsx(n.li,{children:s.jsx(n.a,{href:"#introduction",children:"Introduction"})}),`
-`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#tldr",children:"TLDR"})}),`
-`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#angular-beginnings",children:"Angular Beginnings"})}),`
-`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#workspace-configuration-v2",children:"Workspace Configuration v2"})}),`
+`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#the-quick-scoop-tldr",children:"The Quick Scoop (tldr)"})}),`
+`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#nxs-angular-beginnings",children:"Nx’s Angular Beginnings"})}),`
+`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#birth-of-the-nx-cli-evolution-beyond-angular",children:"Birth of the Nx CLI: Evolution Beyond Angular"})}),`
 `,s.jsx(n.li,{children:s.jsxs(n.a,{href:"#projectjson-and-splitting-workspacejson",children:[s.jsx(n.code,{children:"project.json"})," and splitting ",s.jsx(n.code,{children:"workspace.json"})]})}),`
-`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#the-beginnings-of-inference",children:"The beginnings of inference"})}),`
+`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#the-beginnings-of-inference",children:"The Beginnings of Inference"})}),`
 `,s.jsx(n.li,{children:s.jsx(n.a,{href:"#enter-lerna",children:"Enter Lerna"})}),`
-`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#inference-api-v1-and-workspaces-support",children:"Inference API v1, and workspaces support"})}),`
-`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#inference-api-v2",children:"Inference API v2"})}),`
-`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#project-configuration-v3--project-crystal-",children:"Project Configuration v3 + Project Crystal 💎"})}),`
+`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#inference-api-v1-and-workspaces-support",children:"Inference API v1, and Workspaces Support"})}),`
+`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#elevating-workspaces-with-inference-api-v2",children:"Elevating Workspaces with Inference API v2"})}),`
+`,s.jsx(n.li,{children:s.jsx(n.a,{href:"#entering-the-crystal-era-",children:"Entering the Crystal Era 💎"})}),`
 `,s.jsx(n.li,{children:s.jsx(n.a,{href:"#conclusion",children:"Conclusion"})}),`
 `]}),`
 `,s.jsxs(n.h2,{id:"introduction",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#introduction",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Introduction"]}),`
@@ -21,7 +21,7 @@ import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:
 `,s.jsx(n.li,{children:"Nx is hard to configure"}),`
 `,s.jsx(n.li,{children:"Nx has a lot of configuration."}),`
 `]}),`
-`,s.jsxs(n.h2,{id:"tldr",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#tldr",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"TLDR"]}),`
+`,s.jsxs(n.h2,{id:"the-quick-scoop-tldr",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#the-quick-scoop-tldr",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"The Quick Scoop (tldr)"]}),`
 `,s.jsxs(n.blockquote,{children:[`
 `,s.jsxs(n.ul,{children:[`
 `,s.jsx(n.li,{children:"Nx was initially built as an Angular CLI extension. It has been its own CLI for several years, and has no direct ties to angular at this point."}),`
@@ -29,7 +29,7 @@ import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:
 `,s.jsx(n.li,{children:"You shouldn’t have to worry when the configuration changes, as Nx will migrate your existing config for you."}),`
 `]}),`
 `]}),`
-`,s.jsxs(n.h2,{id:"angular-beginnings",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#angular-beginnings",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Angular Beginnings"]}),`
+`,s.jsxs(n.h2,{id:"nxs-angular-beginnings",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#nxs-angular-beginnings",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Nx’s Angular Beginnings"]}),`
 `,s.jsx(n.p,{children:"Nx was initially built as an Angular CLI extension. It was a set of schematics and builders that extended the Angular CLI’s capabilities. This was a great way to get started, but it had some limitations. For example, it was difficult to add support for other frameworks, and it was difficult to add new commands to the CLI."}),`
 `,s.jsx(n.p,{children:"Angular CLI also supports monorepos, and in the beginning Nx used angular’s configuration. When you have multiple projects, the configuration would look something like this:"}),`
 `,s.jsx(n.pre,{filename:"angular.json",children:s.jsxs(n.code,{className:"hljs language-json",children:[s.jsx(n.span,{className:"hljs-punctuation",children:"{"}),`
@@ -54,7 +54,7 @@ import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:
 `]})}),`
 `,s.jsxs(n.p,{children:["To help distinguish a plain Angular CLI project from an Nx workspace, and better support other tools, we added support for a ",s.jsx(n.code,{children:"workspace.json"})," file. This file was identical to ",s.jsx(n.code,{children:"angular.json"}),"."]}),`
 `,s.jsxs(n.p,{children:["As Nx grew and added more features, we needed to add more configuration. We added a ",s.jsx(n.code,{children:"nx.json"})," file to store this configuration. This file was used to store configuration for things that were specific to Nx, and that angular wouldn’t understand. For example, we added support for ",s.jsx(n.code,{children:"tags"})," and ",s.jsx(n.code,{children:"implicitDependencies"})," to help Nx understand the relationships between projects."]}),`
-`,s.jsxs(n.h2,{id:"workspace-configuration-v2",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#workspace-configuration-v2",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Workspace Configuration v2"]}),`
+`,s.jsxs(n.h2,{id:"birth-of-the-nx-cli-evolution-beyond-angular",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#birth-of-the-nx-cli-evolution-beyond-angular",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Birth of the Nx CLI: Evolution Beyond Angular"]}),`
 `,s.jsxs(n.p,{children:["After a bit, Nx grew apart from Angular CLI. It became a standalone tool that could be used with any framework. This meant that we needed to create our own configuration file. We created ",s.jsx(n.code,{children:"workspace.json"})," to replace ",s.jsx(n.code,{children:"angular.json"}),". The configuration was extraordinarily similar, but it was a different file and a few properties had a different name. The names changed to more closely match the names that Nx uses. For example, ",s.jsx(n.code,{children:"builder"})," became ",s.jsx(n.code,{children:"executor"})," and ",s.jsx(n.code,{children:"architect"})," became ",s.jsx(n.code,{children:"targets"}),"."]}),`
 `,s.jsxs(n.p,{children:["These changes included some differences in ",s.jsx(n.code,{children:"nx.json"})," as well. The ",s.jsx(n.code,{children:"schematics"})," property was renamed as ",s.jsx(n.code,{children:"generators"}),"."]}),`
 `,s.jsx(n.p,{children:"At this point, the files looked like this:"}),`
@@ -198,7 +198,7 @@ import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:
   `,s.jsx(n.span,{className:"hljs-punctuation",children:"}"}),`
 `,s.jsx(n.span,{className:"hljs-punctuation",children:"}"}),`
 `]})}),`
-`,s.jsxs(n.h2,{id:"the-beginnings-of-inference",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#the-beginnings-of-inference",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"The beginnings of inference"]}),`
+`,s.jsxs(n.h2,{id:"the-beginnings-of-inference",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#the-beginnings-of-inference",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"The Beginnings of Inference"]}),`
 `,s.jsxs(n.p,{children:["After the last round of changes, we noticed that the ",s.jsx(n.code,{children:"workspace.json"})," file was not particularly useful. It was just a map of project name to file path. We decided that it should be optional, and in time we dropped support for it entirely."]}),`
 `,s.jsx(n.p,{children:"This change required Nx to be able to locate the configuration of projects without a central file. Adding this support was not a major task, but while doing so we also decided to open up the possibility of dynamically building configuration."}),`
 `,s.jsxs(n.p,{children:["At the same time, there was a push from non-angular users to simplify the configuration. Npm/yarn/pnpm workspaces had gained a bit of popularity and it was much easier to define targets as a ",s.jsx(n.code,{children:"package.json"})," script for a segment of users. We wanted to make it easier for these users to use Nx, while also helping Nx make sense when compared to other tools. The decision was made that if there was a package.json file inside a project, Nx would be able to run its scripts as a target."]}),`
@@ -206,7 +206,7 @@ import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:
 `,s.jsx(n.p,{children:"Lerna has been around a long time, and maintains a good amount of popularity within the JavaScript community. It’s a tool that helps manage multiple packages in a single repository. It’s a bit different from Nx, but it’s similar enough that we were already looking at making it easier to use the two together. Lerna had some functionality that Nx didn’t (publishing packages), and Nx had some functionality that Lerna didn’t (caching and code generation)."}),`
 `,s.jsxs(n.p,{children:["Around this time, several things surrounding lerna started to become worrisome. There was an ",s.jsx(n.a,{href:"https://github.com/lerna/lerna/issues/2703",rel:"noopener noreferrer",target:"_blank",children:"issue"})," filed stating that lerna had been unmaintained. A ",s.jsx(n.a,{href:"https://github.com/lerna/lerna/pull/3092",rel:"noopener noreferrer",target:"_blank",children:"PR"})," had been merged adding a warning that lerna wasn’t being actively maintained, and that the community should consider using other tools."]}),`
 `,s.jsxs(n.p,{children:["These users would need to go somewhere, but any change for them would not be without difficulty. Nrwl, the company behind Nx, decided to step in and offer a solution. After talking with the maintainer, we were able to take over stewardship and step in to maintain the project. This was announced in a blog post here: ",s.jsx(n.a,{href:"https://blog.nrwl.io/lerna-is-dead-long-live-lerna-61259f97dbd9",rel:"noopener noreferrer",target:"_blank",children:"Lerna is dead, Long live Lerna"}),"."]}),`
-`,s.jsxs(n.h2,{id:"inference-api-v1-and-workspaces-support",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#inference-api-v1-and-workspaces-support",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Inference API v1, and workspaces support"]}),`
+`,s.jsxs(n.h2,{id:"inference-api-v1-and-workspaces-support",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#inference-api-v1-and-workspaces-support",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Inference API v1, and Workspaces Support"]}),`
 `,s.jsx(n.p,{children:"With Lerna under our purview we wanted to be able to unify the two tools. Nx should be able to work in a lerna workspace, and hopefully the portions of Lerna that Nx could already handle would then be able to invoke Nx under the hood. This would prevent us from having to maintain two copies of the same functionality, and we were optimistic we could do this without breaking any existing workflows."}),`
 `,s.jsx(n.p,{children:"The first step of this process was to ensure that Nx could work in a Lerna repository without changing the existing structure. This meant a few things:"}),`
 `,s.jsxs(n.ul,{children:[`
@@ -228,7 +228,7 @@ import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:
 `]})}),`
 `,s.jsxs(n.p,{children:["In this example, ",s.jsx(n.code,{children:"projectFilePatterns"})," is an array of file patterns that the plugin can handle. When Nx is looking for a project’s configuration, it will look for a file that matches one of these patterns. If it finds one, it will pass it to ",s.jsx(n.code,{children:"registerProjectTargets"})," and expect it to return the targets a given project can run."]}),`
 `,s.jsxs(n.p,{children:["While we didn’t directly use this API, it was a very small inclusion in the core code to enable Nx running inside a repository that was only configured by ",s.jsx(n.code,{children:"package.json"})," files. The published API was also used to show how Nx could one day be used in C# or Java repositories, without introducing new configuration files."]}),`
-`,s.jsxs(n.h2,{id:"inference-api-v2",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#inference-api-v2",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Inference API v2"]}),`
+`,s.jsxs(n.h2,{id:"elevating-workspaces-with-inference-api-v2",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#elevating-workspaces-with-inference-api-v2",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Elevating Workspaces with Inference API v2"]}),`
 `,s.jsxs(n.p,{children:["We were mostly happy with the inference apis and configuration loading, but there were a few things that we wanted to clean up within Nx’s codebase and the API itself. In particular we wanted to be able to streamline our handling of ",s.jsx(n.code,{children:"angular.json"})," for legacy users, and wanted to migrate the ",s.jsx(n.code,{children:"project.json"})," and ",s.jsx(n.code,{children:"package.json"})," configuration loading into the same API."]}),`
 `,s.jsx(n.p,{children:"In order to do this, we needed an API that:"}),`
 `,s.jsxs(n.ul,{children:[`
@@ -246,7 +246,7 @@ import{j as s}from"./chunk-529f355d.js";function l(e){const n={a:"a",blockquote:
 `]})}),`
 `,s.jsxs(n.p,{children:[s.jsx(n.code,{children:"CreateNodes"})," is a tuple, where the first element is a glob pattern that the plugin can handle, and the second element is a function that will read the file and return the projects it contains. ",s.jsx(n.code,{children:"createDependencies"})," is a function that will be called after all of the nodes have been created, and is responsible for creating the edges between the nodes."]}),`
 `,s.jsxs(n.p,{children:["This API met all of the requirements we set out on, and ensured there was only one spot for plugin authors to add new nodes to the graph. It released as part of Nx 17, and was talked about at that years ",s.jsx(n.a,{href:"https://www.youtube.com/watch?v=bnjOu7iOrMg",rel:"noopener noreferrer",target:"_blank",children:"Nx Conf"})]}),`
-`,s.jsxs(n.h2,{id:"project-configuration-v3--project-crystal-",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#project-configuration-v3--project-crystal-",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Project Configuration v3 + Project Crystal 💎"]}),`
+`,s.jsxs(n.h2,{id:"entering-the-crystal-era-",children:[s.jsx(n.a,{"aria-hidden":"true",tabIndex:"-1",href:"#entering-the-crystal-era-",children:s.jsx(s.Fragment,{children:s.jsx(n.span,{children:"🔗"})})}),"Entering the Crystal Era 💎"]}),`
 `,s.jsx(n.p,{children:"A large goal that the Nx team has consistently worked on is making Nx easier to adopt. Configuration changes are a large part of this, but we also took some time to reflect on how we integrate with other tools."}),`
 `,s.jsxs(n.p,{children:["Traditionally, Nx would provide an executor that wrapped a tool like ",s.jsx(n.code,{children:"jest"}),". When running test, Nx would invoke the executor which would then invoke ",s.jsx(n.code,{children:"jest"}),". This was a bit of a pain point for users, as they would have to learn how to use Nx’s executors and any of the idiosyncrasies that came with them. Additionally, it made it harder to get help when things went wrong, as the error messages would be different than what the user would see when running ",s.jsx(n.code,{children:"jest"})," directly. Users would frequently ask questions that would be better solved by Jest’s documentation, but they wouldn’t know that because they were using Nx’s executors."]}),`
 `,s.jsxs(n.p,{children:["Nx had been able to run arbitrary scripts in ",s.jsx(n.code,{children:"package.json"})," files or arbitrary commands specified in ",s.jsx(n.code,{children:"project.json"})," for a while, but it was not the default. We didn’t encourage using ",s.jsx(n.code,{children:"run-commands"})," for everything, as there were some problems when using it:"]}),`
