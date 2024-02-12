@@ -1,4 +1,4 @@
-import{r as a,j as d}from"../chunks/chunk-529f355d.js";import{_ as r}from"../chunks/chunk-101896b7.js";import{P as _}from"../chunks/chunk-980425a9.js";import{u as g}from"../chunks/chunk-a9f9b8c5.js";const p=(n,s)=>{const t=n[s];return t?typeof t=="function"?t():Promise.resolve(t):new Promise((i,o)=>{(typeof queueMicrotask=="function"?queueMicrotask:setTimeout)(o.bind(null,new Error("Unknown variable dynamic import: "+s)))})},y=`let initialized = false;
+import{r as a,j as d}from"../chunks/chunk-529f355d.js";import{_ as r}from"../chunks/chunk-101896b7.js";import{P as _}from"../chunks/chunk-675c92d5.js";import{u as g}from"../chunks/chunk-a9f9b8c5.js";const p=(n,s)=>{const t=n[s];return t?typeof t=="function"?t():Promise.resolve(t):new Promise((i,o)=>{(typeof queueMicrotask=="function"?queueMicrotask:setTimeout)(o.bind(null,new Error("Unknown variable dynamic import: "+s)))})},y=`let initialized = false;
 
 // eslint-disable-next-line no-undef
 remark
