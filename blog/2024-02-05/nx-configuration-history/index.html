@@ -27,8 +27,12 @@
         <div id="react-root"><div class="layout"><div class="sidebar"><a class="navitem" href="/">Home</a><a class="navitem" href="/presentations">Speaking + Presentations</a><a class="navitem" href="/blog/1">Blog</a></div><div class="content"><h1 id="nx-from-angular-roots-to-crystal-future">Nx: From Angular Roots to Crystal Future</h1>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
-<li><a href="#introduction">Introduction</a></li>
+<li><a href="#introduction">Introduction</a>
+<ul>
 <li><a href="#the-quick-scoop-tldr">The Quick Scoop (tldr)</a></li>
+<li><a href="#the-final-result">The Final Result</a></li>
+</ul>
+</li>
 <li><a href="#nxs-angular-beginnings">Nx’s Angular Beginnings</a></li>
 <li><a href="#birth-of-the-nx-cli-evolution-beyond-angular">Birth of the Nx CLI: Evolution Beyond Angular</a></li>
 <li><a href="#projectjson-and-splitting-workspacejson"><code>project.json</code> and splitting <code>workspace.json</code></a></li>
@@ -38,6 +42,7 @@
 <li><a href="#elevating-workspaces-with-inference-api-v2">Elevating Workspaces with Inference API v2</a></li>
 <li><a href="#entering-the-crystal-era-">Entering the Crystal Era 💎</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references-and-links">References and Links</a></li>
 </ul>
 <h2 id="introduction">Introduction<a class="heading-link" href="#introduction">#</a></h2>
 <p>Nx’s configuration has changed dramatically over the years, and it’s been a long journey to get to where we are today. I joined the Nx team in June 2021, right before we split up <code>workspace.json</code> into <code>workspace.json</code> and <code>project.json</code>. Since joining the team, I’ve had a pretty direct hand in many of these changes, and have worked closely on others.</p>
@@ -47,12 +52,19 @@
 <li>Nx is hard to configure</li>
 <li>Nx has a lot of configuration.</li>
 </ul>
-<h2 id="the-quick-scoop-tldr">The Quick Scoop (tldr)<a class="heading-link" href="#the-quick-scoop-tldr">#</a></h2>
+<h3 id="the-quick-scoop-tldr">The Quick Scoop (tldr)<a class="heading-link" href="#the-quick-scoop-tldr">#</a></h3>
 <ul>
 <li>Nx was initially built as an Angular CLI extension. It has been its own CLI for several years, and has no direct ties to angular at this point.</li>
 <li>Nx’s configuration has went through several iterations, and mostly configures itself these days.</li>
 <li>You shouldn’t have to worry when the configuration changes, as Nx will migrate your existing config for you.</li>
 </ul>
+<h3 id="the-final-result">The Final Result<a class="heading-link" href="#the-final-result">#</a></h3>
+<p>After Nx 18, the Nx side of configuration for individual projects in a workspace can be as simple as this:</p>
+<div style="display:flex;flex-direction:column"><div class="code-tabs"><div class="filename">apps/myapp/project.json</div></div><pre style="margin-top:0" class="code-wrapper has-filename"><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;myapp&quot;</span><span class="hljs-punctuation">,</span>
+<span class="hljs-punctuation">}</span>
+</code></pre></div>
+<p>The rest of the configuration that one may expect (targets to run as the most common example) can be inferred from configuration files present in the project’s root. This is a dramatic reduction from where we started, and hopefully makes Nx easier to adopt and learn.</p>
 <h2 id="nxs-angular-beginnings">Nx’s Angular Beginnings<a class="heading-link" href="#nxs-angular-beginnings">#</a></h2>
 <p>Nx was initially built as an Angular CLI extension. It was a set of schematics and builders that extended the Angular CLI’s capabilities. This was a great way to get started, but it had some limitations. For example, it was difficult to add support for other frameworks, and it was difficult to add new commands to the CLI.</p>
 <p>Angular CLI also supports monorepos, and in the beginning Nx used angular’s configuration. When you have multiple projects, the configuration would look something like this:</p>
@@ -178,7 +190,7 @@
 <p>When working with customers with over 200 projects, this was no longer scalable. We needed to split the <code>workspace.json</code> file into multiple files. We also needed to make it easier to add new projects and modify existing projects.</p>
 <p>We decided that <code>workspace.json</code> would contain a map of project name to file path. This would allow us to split the configuration into multiple files. At the same time, it was important to maintain compatibility with Angular CLI schematics and builders. We wanted to do this without having to keep a copy of the Angular CLI configuration in sync with the Nx configuration.</p>
 <p>As such, we created a translation layer that would handle reading and writing the configuration when angular asked for it. Doing this unlocked a ton of flexibility on our side to make changes to the configuration without breaking compatibility with Angular CLI.</p>
-<p>Additionally, we took some time to reevaluate where existing configuration options lived. Since we now have a configuration file per project it made less sense to place <code>tags</code> and <code>implicitDependencies</code> in <code>nx.json</code>. We moved these properties to <code>nx.json</code> as well.</p>
+<p>Additionally, we took some time to reevaluate where existing configuration options lived. Since we now have a configuration file per project it made less sense to place <code>tags</code> and <code>implicitDependencies</code> in <code>nx.json</code>. We moved these properties to <code>project.json</code> as well.</p>
 <p>The end result of this round of changes resulted in:</p>
 <ul>
 <li><code>workspace.json</code> containing a map of project name to file path</li>
@@ -297,14 +309,18 @@
 </ul>
 <h2 id="conclusion">Conclusion<a class="heading-link" href="#conclusion">#</a></h2>
 <p>Nx’s configuration has changed a lot over the years, and it’s been a long journey to get to where we are today. We’ve made a lot of changes to make Nx easier to adopt, and we’ve made a lot of changes to make Nx easier to use.</p>
-<p>Project Crystal helped slim down the Nx configuration within a workspace to only <code>nx.json</code> for many repos, and opens the doors for Nx to be used in a wider variety of repositories. We’re excited to see what the future holds for Nx, and as always, stay tuned 📺.</p></div></div></div>
+<p>Project Crystal helped slim down the Nx configuration within a workspace to only <code>nx.json</code> for many repos, and opens the doors for Nx to be used in a wider variety of repositories. We’re excited to see what the future holds for Nx, and as always, stay tuned 📺.</p>
+<h2 id="references-and-links">References and Links<a class="heading-link" href="#references-and-links">#</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=wADNsVItnsM" rel="noopener noreferrer" target="_blank">Nx Project Crystal 💎</a></li>
+</ul></div></div></div>
         <script id="vike_pageContext" type="application/json">{"pageProps":"!undefined","urlPathname":"/blog/2024-02-05/nx-configuration-history","urlParsed":{"origin":null,"pathname":"/blog/2024-02-05/nx-configuration-history","pathnameOriginal":"/blog/2024-02-05/nx-configuration-history","search":{},"searchAll":{},"searchOriginal":null},"routeParams":{"date":"2024-02-05","slug":"nx-configuration-history"},"abortReason":"!undefined","_urlRewrite":null,"_urlRedirect":"!undefined","abortStatusCode":"!undefined","_abortCall":"!undefined","_pageContextInitIsPassedToClient":"!undefined","_pageId":"/pages/blog/view","data":"!undefined"}</script>
-        <script src="/assets/entries/entry-server-routing.b1d96792.js" type="module" async></script>
-        <link rel="modulepreload" href="/assets/entries/pages_blog_view.page.c9f82f74.js" as="script" type="text/javascript">
+        <script src="/assets/entries/entry-server-routing.925737f1.js" type="module" async></script>
+        <link rel="modulepreload" href="/assets/entries/pages_blog_view.page.65aa055d.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/chunks/chunk-529f355d.js" as="script" type="text/javascript">
-        <link rel="modulepreload" href="/assets/chunks/chunk-e4fd9f32.js" as="script" type="text/javascript">
+        <link rel="modulepreload" href="/assets/chunks/chunk-49926b01.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/chunks/chunk-a9f9b8c5.js" as="script" type="text/javascript">
-        <link rel="modulepreload" href="/assets/entries/renderer_default.page.client.7dc71ccc.js" as="script" type="text/javascript">
+        <link rel="modulepreload" href="/assets/entries/renderer_default.page.client.6e38bcfa.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/chunks/chunk-9af66d49.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/entries/renderer_default.page.server.extractAssets.9c726019.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/assets/chunks/chunk-d1ef7cd1.js" as="script" type="text/javascript">

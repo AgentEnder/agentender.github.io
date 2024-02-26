@@ -1,8 +1,12 @@
-import{j as n}from"./chunk-529f355d.js";function l(e){const s={a:"a",code:"code",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...e.components};return n.jsxs(n.Fragment,{children:[n.jsx(s.h1,{id:"nx-from-angular-roots-to-crystal-future",children:"Nx: From Angular Roots to Crystal Future"}),`
+import{j as n}from"./chunk-529f355d.js";function l(e){const s={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...e.components};return n.jsxs(n.Fragment,{children:[n.jsx(s.h1,{id:"nx-from-angular-roots-to-crystal-future",children:"Nx: From Angular Roots to Crystal Future"}),`
 `,n.jsx(s.h2,{id:"table-of-contents",children:"Table of Contents"}),`
 `,n.jsxs(s.ul,{children:[`
-`,n.jsx(s.li,{children:n.jsx(s.a,{href:"#introduction",children:"Introduction"})}),`
+`,n.jsxs(s.li,{children:[n.jsx(s.a,{href:"#introduction",children:"Introduction"}),`
+`,n.jsxs(s.ul,{children:[`
 `,n.jsx(s.li,{children:n.jsx(s.a,{href:"#the-quick-scoop-tldr",children:"The Quick Scoop (tldr)"})}),`
+`,n.jsx(s.li,{children:n.jsx(s.a,{href:"#the-final-result",children:"The Final Result"})}),`
+`]}),`
+`]}),`
 `,n.jsx(s.li,{children:n.jsx(s.a,{href:"#nxs-angular-beginnings",children:"Nx’s Angular Beginnings"})}),`
 `,n.jsx(s.li,{children:n.jsx(s.a,{href:"#birth-of-the-nx-cli-evolution-beyond-angular",children:"Birth of the Nx CLI: Evolution Beyond Angular"})}),`
 `,n.jsx(s.li,{children:n.jsxs(s.a,{href:"#projectjson-and-splitting-workspacejson",children:[n.jsx(s.code,{children:"project.json"})," and splitting ",n.jsx(s.code,{children:"workspace.json"})]})}),`
@@ -12,6 +16,7 @@ import{j as n}from"./chunk-529f355d.js";function l(e){const s={a:"a",code:"code"
 `,n.jsx(s.li,{children:n.jsx(s.a,{href:"#elevating-workspaces-with-inference-api-v2",children:"Elevating Workspaces with Inference API v2"})}),`
 `,n.jsx(s.li,{children:n.jsx(s.a,{href:"#entering-the-crystal-era-",children:"Entering the Crystal Era 💎"})}),`
 `,n.jsx(s.li,{children:n.jsx(s.a,{href:"#conclusion",children:"Conclusion"})}),`
+`,n.jsx(s.li,{children:n.jsx(s.a,{href:"#references-and-links",children:"References and Links"})}),`
 `]}),`
 `,n.jsxs(s.h2,{id:"introduction",children:["Introduction",n.jsx(s.a,{className:"heading-link",href:"#introduction",children:"#"})]}),`
 `,n.jsxs(s.p,{children:["Nx’s configuration has changed dramatically over the years, and it’s been a long journey to get to where we are today. I joined the Nx team in June 2021, right before we split up ",n.jsx(s.code,{children:"workspace.json"})," into ",n.jsx(s.code,{children:"workspace.json"})," and ",n.jsx(s.code,{children:"project.json"}),". Since joining the team, I’ve had a pretty direct hand in many of these changes, and have worked closely on others."]}),`
@@ -21,12 +26,19 @@ import{j as n}from"./chunk-529f355d.js";function l(e){const s={a:"a",code:"code"
 `,n.jsx(s.li,{children:"Nx is hard to configure"}),`
 `,n.jsx(s.li,{children:"Nx has a lot of configuration."}),`
 `]}),`
-`,n.jsxs(s.h2,{id:"the-quick-scoop-tldr",children:["The Quick Scoop (tldr)",n.jsx(s.a,{className:"heading-link",href:"#the-quick-scoop-tldr",children:"#"})]}),`
+`,n.jsxs(s.h3,{id:"the-quick-scoop-tldr",children:["The Quick Scoop (tldr)",n.jsx(s.a,{className:"heading-link",href:"#the-quick-scoop-tldr",children:"#"})]}),`
 `,n.jsxs(s.ul,{children:[`
 `,n.jsx(s.li,{children:"Nx was initially built as an Angular CLI extension. It has been its own CLI for several years, and has no direct ties to angular at this point."}),`
 `,n.jsx(s.li,{children:"Nx’s configuration has went through several iterations, and mostly configures itself these days."}),`
 `,n.jsx(s.li,{children:"You shouldn’t have to worry when the configuration changes, as Nx will migrate your existing config for you."}),`
 `]}),`
+`,n.jsxs(s.h3,{id:"the-final-result",children:["The Final Result",n.jsx(s.a,{className:"heading-link",href:"#the-final-result",children:"#"})]}),`
+`,n.jsx(s.p,{children:"After Nx 18, the Nx side of configuration for individual projects in a workspace can be as simple as this:"}),`
+`,n.jsx(s.pre,{filename:"apps/myapp/project.json",children:n.jsxs(s.code,{className:"hljs language-json",children:[n.jsx(s.span,{className:"hljs-punctuation",children:"{"}),`
+    `,n.jsx(s.span,{className:"hljs-attr",children:'"name"'}),n.jsx(s.span,{className:"hljs-punctuation",children:":"})," ",n.jsx(s.span,{className:"hljs-string",children:'"myapp"'}),n.jsx(s.span,{className:"hljs-punctuation",children:","}),`
+`,n.jsx(s.span,{className:"hljs-punctuation",children:"}"}),`
+`]})}),`
+`,n.jsx(s.p,{children:"The rest of the configuration that one may expect (targets to run as the most common example) can be inferred from configuration files present in the project’s root. This is a dramatic reduction from where we started, and hopefully makes Nx easier to adopt and learn."}),`
 `,n.jsxs(s.h2,{id:"nxs-angular-beginnings",children:["Nx’s Angular Beginnings",n.jsx(s.a,{className:"heading-link",href:"#nxs-angular-beginnings",children:"#"})]}),`
 `,n.jsx(s.p,{children:"Nx was initially built as an Angular CLI extension. It was a set of schematics and builders that extended the Angular CLI’s capabilities. This was a great way to get started, but it had some limitations. For example, it was difficult to add support for other frameworks, and it was difficult to add new commands to the CLI."}),`
 `,n.jsx(s.p,{children:"Angular CLI also supports monorepos, and in the beginning Nx used angular’s configuration. When you have multiple projects, the configuration would look something like this:"}),`
@@ -152,7 +164,7 @@ import{j as n}from"./chunk-529f355d.js";function l(e){const s={a:"a",code:"code"
 `,n.jsxs(s.p,{children:["When working with customers with over 200 projects, this was no longer scalable. We needed to split the ",n.jsx(s.code,{children:"workspace.json"})," file into multiple files. We also needed to make it easier to add new projects and modify existing projects."]}),`
 `,n.jsxs(s.p,{children:["We decided that ",n.jsx(s.code,{children:"workspace.json"})," would contain a map of project name to file path. This would allow us to split the configuration into multiple files. At the same time, it was important to maintain compatibility with Angular CLI schematics and builders. We wanted to do this without having to keep a copy of the Angular CLI configuration in sync with the Nx configuration."]}),`
 `,n.jsx(s.p,{children:"As such, we created a translation layer that would handle reading and writing the configuration when angular asked for it. Doing this unlocked a ton of flexibility on our side to make changes to the configuration without breaking compatibility with Angular CLI."}),`
-`,n.jsxs(s.p,{children:["Additionally, we took some time to reevaluate where existing configuration options lived. Since we now have a configuration file per project it made less sense to place ",n.jsx(s.code,{children:"tags"})," and ",n.jsx(s.code,{children:"implicitDependencies"})," in ",n.jsx(s.code,{children:"nx.json"}),". We moved these properties to ",n.jsx(s.code,{children:"nx.json"})," as well."]}),`
+`,n.jsxs(s.p,{children:["Additionally, we took some time to reevaluate where existing configuration options lived. Since we now have a configuration file per project it made less sense to place ",n.jsx(s.code,{children:"tags"})," and ",n.jsx(s.code,{children:"implicitDependencies"})," in ",n.jsx(s.code,{children:"nx.json"}),". We moved these properties to ",n.jsx(s.code,{children:"project.json"})," as well."]}),`
 `,n.jsx(s.p,{children:"The end result of this round of changes resulted in:"}),`
 `,n.jsxs(s.ul,{children:[`
 `,n.jsxs(s.li,{children:[n.jsx(s.code,{children:"workspace.json"})," containing a map of project name to file path"]}),`
@@ -271,4 +283,8 @@ import{j as n}from"./chunk-529f355d.js";function l(e){const s={a:"a",code:"code"
 `]}),`
 `,n.jsxs(s.h2,{id:"conclusion",children:["Conclusion",n.jsx(s.a,{className:"heading-link",href:"#conclusion",children:"#"})]}),`
 `,n.jsx(s.p,{children:"Nx’s configuration has changed a lot over the years, and it’s been a long journey to get to where we are today. We’ve made a lot of changes to make Nx easier to adopt, and we’ve made a lot of changes to make Nx easier to use."}),`
-`,n.jsxs(s.p,{children:["Project Crystal helped slim down the Nx configuration within a workspace to only ",n.jsx(s.code,{children:"nx.json"})," for many repos, and opens the doors for Nx to be used in a wider variety of repositories. We’re excited to see what the future holds for Nx, and as always, stay tuned 📺."]})]})}function c(e={}){const{wrapper:s}=e.components||{};return s?n.jsx(s,{...e,children:n.jsx(l,{...e})}):l(e)}const r={mdx:c,publishDate:new Date(2024,1,5),slug:"nx-configuration-history",title:"Nx Configuration History",description:"Nx's configuration has changed dramatically over the years, and it's been a long journey to get to where we are today. I joined the Nx team in June 2021, right before we split up `workspace.json` into `workspace.json` and `project.json`. Since joining the team, I've had a pretty direct hand in many of these changes, and have worked closely on others."};function h(e,s){const t=[],a=[...e];for(;a.length;)t.push(a.splice(0,Math.min(s,a.length)));return t}const i=[r].sort((e,s)=>e.publishDate.getTime()-s.publishDate.getTime()),d=Object.fromEntries(i.map(e=>[e.slug,e])),p=h(i,10);export{p,d as s};
+`,n.jsxs(s.p,{children:["Project Crystal helped slim down the Nx configuration within a workspace to only ",n.jsx(s.code,{children:"nx.json"})," for many repos, and opens the doors for Nx to be used in a wider variety of repositories. We’re excited to see what the future holds for Nx, and as always, stay tuned 📺."]}),`
+`,n.jsxs(s.h2,{id:"references-and-links",children:["References and Links",n.jsx(s.a,{className:"heading-link",href:"#references-and-links",children:"#"})]}),`
+`,n.jsxs(s.ul,{children:[`
+`,n.jsx(s.li,{children:n.jsx(s.a,{href:"https://www.youtube.com/watch?v=wADNsVItnsM",rel:"noopener noreferrer",target:"_blank",children:"Nx Project Crystal 💎"})}),`
+`]})]})}function c(e={}){const{wrapper:s}=e.components||{};return s?n.jsx(s,{...e,children:n.jsx(l,{...e})}):l(e)}const r={mdx:c,publishDate:new Date(2024,1,5),slug:"nx-configuration-history",title:"Nx Configuration History",description:"Nx's configuration has changed dramatically over the years, and it's been a long journey to get to where we are today. I joined the Nx team in June 2021, right before we split up `workspace.json` into `workspace.json` and `project.json`. Since joining the team, I've had a pretty direct hand in many of these changes, and have worked closely on others."};function h(e,s){const t=[],a=[...e];for(;a.length;)t.push(a.splice(0,Math.min(s,a.length)));return t}const i=[r].sort((e,s)=>e.publishDate.getTime()-s.publishDate.getTime()),d=Object.fromEntries(i.map(e=>[e.slug,e])),p=h(i,10);export{p,d as s};
